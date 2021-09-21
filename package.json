@@ -1,0 +1,25 @@
+{
+  "name": "lintdemo",
+  "version": "1.0.0",
+  "description": "git提交lint校验，格式化，提交的Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengluoX/lintDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengluoX/lintDemo/issues"
+  },
+  "homepage": "https://github.com/fengluoX/lintDemo#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "husky": "^7.0.2"
+  }
+}
