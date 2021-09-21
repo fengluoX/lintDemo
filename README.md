@@ -24,3 +24,23 @@
         npx husky install
         npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
     ```
+
+4. 配置安装后自动启用husky钩子
+
+    你可以使用下面这个命令
+
+    ```bash
+        npm set-script prepare "husky install"
+    ```
+
+    或者直接修改package.json
+
+    ```json
+        {
+            // ...
+            "scripts": {
+                "prepare": "husky install"
+            },
+            // ...
+        }
+    ```
