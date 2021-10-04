@@ -4,8 +4,10 @@
   "description": "git提交lint校验，格式化，提交的Demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky":{
+    "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,6 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
-    "husky": "^7.0.2"
+    "husky": "^4.3.8"
   }
 }
