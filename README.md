@@ -61,6 +61,24 @@
 
     2. 安装旧版本husky
 
-        `npm install husky@4.3.8 -D`
+        `npm install husky@3.0.5 -D`
 
-    3. 更改package.json文件
+    3. 更改package.json文件  
+
+        ```json
+            {
+                // ...
+                "husky": {
+                    "hooks": {
+                    "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+                    }
+                },
+                "devDependencies": {
+                    "@commitlint/cli": "^13.1.0",
+                    "@commitlint/config-conventional": "^13.1.0",
+                    "husky": "^3.0.5"
+                }
+            }
+        ```
+
+这样，就可以正常的触发husky的钩子了，最后：[源码地址](https://github.com/fengluoX/lintDemo/tree/main)
